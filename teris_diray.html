@@ -1,0 +1,47 @@
+<!-- html 기본 골격: http://www.tcpschool.com/html/html_intro_basicStructure -->
+<!DOCTYPE html>
+<!-- en-> kr :https://mygumi.tistory.com/52 -->
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewprot" content="width=device=width, initial=scale=1.0">
+    <title>
+        테리스의 일기
+    </title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><style>
+        div {
+            height: 800px;
+	        position: relative;
+        }
+        img {
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+<!-- script는 head에 속합니다 -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        let num = 0;
+        let pageN =["page00","page01", "page02", "page03", "page04", "page05", "page06", "page07", "page08"];
+        $("#img").click(function(){
+             if (num ==8) num = 0;
+             else num++          
+            $(this).attr("src", pageN[num]+".png");
+        });
+    });
+</script>
+</head>
+<body bgcolor="black">
+    <div>
+	//내가 원한다면 너는 그곳에 있겠다고 했지.
+	//기다려.
+	//반드시, 널 찾을테야.
+    <img id="img" src="page00.png" >
+   </div>
+</body>
+</html>
